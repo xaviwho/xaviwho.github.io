@@ -1,0 +1,1161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Victor Ikenna Kanu — Researcher in AI-driven drug discovery</title>
+<meta name="description" content="Victor Ikenna Kanu is a graduate researcher at Kumoh National Institute of Technology working on AI-driven drug discovery, protein structure analysis, and verifiable computational biology workflows." />
+<meta name="author" content="Victor Ikenna Kanu" />
+<meta property="og:title" content="Victor Ikenna Kanu — Researcher" />
+<meta property="og:description" content="AI-driven drug discovery, protein–ligand modelling, and verifiable scientific workflows." />
+<meta property="og:type" content="profile" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #F8F6F2;
+    --surface: #FFFFFF;
+    --text: #1A1A1A;
+    --text-secondary: #5C5C5C;
+    --text-muted: #8A8A8A;
+    --border: #E5E0D8;
+    --border-strong: #CFC7B8;
+    --accent: #6B4423;
+    --accent-soft: #8A5E38;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --serif: 'Source Serif 4', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+    --mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+    --max-w: 780px;
+    --max-w-wide: 920px;
+  }
+  [data-theme="dark"] {
+    --bg: #121212;
+    --surface: #1A1A1A;
+    --text: #EDEAE3;
+    --text-secondary: #B8B3A8;
+    --text-muted: #8A8478;
+    --border: #2A2724;
+    --border-strong: #3D3933;
+    --accent: #C79A6B;
+    --accent-soft: #B58858;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 68px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+  ::selection { background: var(--accent); color: var(--bg); }
+
+  /* Nav */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: saturate(140%) blur(8px);
+    -webkit-backdrop-filter: saturate(140%) blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav .wrap {
+    max-width: var(--max-w-wide);
+    margin: 0 auto;
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  nav .brand {
+    font-family: var(--sans);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    font-size: 15px;
+    color: var(--text);
+    text-decoration: none;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 22px;
+    font-family: var(--sans);
+    font-size: 14px;
+  }
+  nav ul a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  nav ul a:hover { color: var(--accent); }
+  nav .theme-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-family: var(--sans);
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  nav .theme-btn:hover { border-color: var(--accent); color: var(--accent); }
+  nav .nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    cursor: pointer;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+  }
+  nav .nav-toggle:hover { border-color: var(--accent); color: var(--accent); }
+  nav .nav-toggle svg { width: 18px; height: 18px; transition: transform 0.2s ease; }
+  nav .nav-toggle.open svg { transform: rotate(90deg); }
+  nav .nav-actions { display: flex; align-items: center; gap: 8px; }
+
+  @media (max-width: 820px) {
+    nav .nav-toggle { display: inline-flex; }
+    nav ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+      padding: 4px 24px 16px;
+      background: color-mix(in srgb, var(--bg) 98%, transparent);
+      backdrop-filter: saturate(140%) blur(10px);
+      -webkit-backdrop-filter: saturate(140%) blur(10px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 6px 18px color-mix(in srgb, var(--text) 6%, transparent);
+    }
+    nav ul.open {
+      display: flex;
+      animation: navSlide 0.18s ease;
+    }
+    nav ul li {
+      padding: 0;
+      border-top: 1px solid var(--border);
+    }
+    nav ul li:first-child { border-top: none; }
+    nav ul li a {
+      display: block;
+      padding: 14px 4px;
+      font-size: 15px;
+      color: var(--text);
+    }
+    @keyframes navSlide {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: none; }
+    }
+  }
+
+  /* Layout */
+  main { max-width: var(--max-w); margin: 0 auto; padding: 0 28px 120px; }
+  section { padding: 72px 0 24px; border-top: 1px solid var(--border); }
+  section:first-of-type { border-top: none; }
+  h1, h2, h3, h4 {
+    font-family: var(--sans);
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin: 0 0 28px;
+  }
+  h3 { font-size: 20px; margin: 0 0 8px; }
+  h4 { font-size: 16px; margin: 0 0 4px; }
+  p { margin: 0 0 16px; color: var(--text); }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  a:hover { border-bottom-color: var(--accent); }
+
+  /* Hero */
+  .hero {
+    padding: 88px 0 32px;
+    border-top: none;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+  }
+  .hero-text h1 {
+    font-size: 38px;
+    margin: 0 0 14px;
+    line-height: 1.1;
+  }
+  .hero-text .tagline {
+    font-size: 19px;
+    color: var(--text-secondary);
+    margin: 0 0 12px;
+    font-style: italic;
+  }
+  .hero-text .meta {
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 0 0 22px;
+  }
+  .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 13px;
+  }
+  .hero-links a {
+    border: 1px solid var(--border-strong);
+    padding: 7px 13px;
+    border-radius: 999px;
+    color: var(--text-secondary);
+    background: transparent;
+  }
+  .hero-links a:hover { color: var(--accent); border-color: var(--accent); background: color-mix(in srgb, var(--accent) 6%, transparent); }
+  .portrait {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border-strong);
+    filter: grayscale(15%);
+  }
+  @media (max-width: 640px) {
+    .hero { grid-template-columns: 1fr; text-align: left; gap: 24px; }
+    .portrait { width: 120px; height: 120px; }
+    .hero-text h1 { font-size: 30px; }
+  }
+
+  /* About */
+  .about p { color: var(--text); }
+
+  /* Research areas */
+  .research-grid {
+    display: grid;
+    gap: 28px;
+  }
+  .research-item h3 {
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+  .research-item p {
+    color: var(--text-secondary);
+    font-size: 16px;
+  }
+
+  /* Project cards */
+  .projects { display: grid; gap: 0; }
+  .project {
+    border-top: 1px solid var(--border);
+    padding: 22px 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: baseline;
+  }
+  .project:first-child { border-top: none; }
+  .project h3 {
+    font-size: 17px;
+    margin: 0 0 4px;
+  }
+  .project .role {
+    font-family: var(--sans);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin: 0 0 6px;
+  }
+  .project p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    margin: 6px 0 0;
+  }
+  .project .dates {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+  @media (max-width: 560px) {
+    .project { grid-template-columns: 1fr; gap: 4px; }
+  }
+
+  /* Publications */
+  .pub-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 24px;
+    font-family: var(--sans);
+    font-size: 13px;
+  }
+  .pub-filter button {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 6px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: var(--sans);
+    font-size: 13px;
+    transition: all 0.15s ease;
+  }
+  .pub-filter button:hover { border-color: var(--accent-soft); color: var(--text); }
+  .pub-filter button.active {
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+  }
+  .pub-group { margin-bottom: 36px; }
+  .pub-group h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin: 0 0 14px;
+    font-family: var(--sans);
+  }
+  .pub-list { list-style: none; padding: 0; margin: 0; counter-reset: pub; }
+  .pub {
+    counter-increment: pub;
+    padding: 14px 0 14px 34px;
+    border-top: 1px solid var(--border);
+    position: relative;
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--text);
+  }
+  .pub:first-child { border-top: none; }
+  .pub::before {
+    content: counter(pub);
+    position: absolute;
+    left: 0;
+    top: 16px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0;
+  }
+  .pub .author-self { font-weight: 600; color: var(--text); }
+  .pub .venue { font-style: italic; color: var(--text-secondary); }
+  .pub .status {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-style: normal;
+    padding: 2px 7px;
+    border: 1px solid var(--border-strong);
+    border-radius: 3px;
+    color: var(--text-muted);
+    margin-left: 6px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    vertical-align: 1px;
+  }
+  .pub.hidden { display: none; }
+  .pub .year {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  /* Awards */
+  .awards { list-style: none; padding: 0; margin: 0; }
+  .award {
+    display: grid;
+    grid-template-columns: 1fr 110px;
+    gap: 16px;
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+    align-items: baseline;
+  }
+  .award:first-child { border-top: none; }
+  .award .title { font-size: 16px; }
+  .award .issuer {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-top: 2px;
+  }
+  .award .date {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: right;
+    white-space: nowrap;
+  }
+  @media (max-width: 560px) {
+    .award { grid-template-columns: 1fr; }
+    .award .date { text-align: left; }
+  }
+
+  /* Teaching */
+  .teaching-item {
+    padding: 16px 0;
+    border-top: 1px solid var(--border);
+  }
+  .teaching-item:first-child { border-top: none; }
+  .teaching-item h4 { font-size: 16px; margin: 0 0 2px; }
+  .teaching-item .org {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .teaching-item p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  /* Contact / footer */
+  .contact-links {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 10px 20px;
+    font-family: var(--sans);
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  .contact-links dt { color: var(--text-muted); }
+  .contact-links dd { margin: 0; color: var(--text); }
+  footer {
+    margin-top: 80px;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Progressive disclosure */
+  .hidden-preview { display: none !important; }
+  .read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-top: 20px;
+    color: var(--accent);
+    cursor: pointer;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: color 0.15s ease;
+  }
+  .read-more-btn::after {
+    content: '→';
+    margin-left: 8px;
+    display: inline-block;
+    transition: transform 0.15s ease;
+  }
+  .read-more-btn:hover { color: var(--accent-soft); }
+  .read-more-btn:hover::after { transform: translateX(3px); }
+  .read-more-btn .count {
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-left: 6px;
+  }
+
+  /* Back to top button */
+  .to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border-strong);
+    background: var(--surface);
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s, border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+    z-index: 90;
+    box-shadow: 0 2px 12px color-mix(in srgb, var(--text) 8%, transparent);
+  }
+  .to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  .to-top:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 6%, var(--surface));
+  }
+  .to-top svg { width: 16px; height: 16px; }
+  @media (max-width: 560px) {
+    .to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; }
+  }
+
+  /* Mobile refinements */
+  @media (max-width: 720px) {
+    body { font-size: 16.5px; }
+    main { padding: 0 22px 80px; }
+    section { padding: 56px 0 16px; }
+    .hero { padding: 56px 0 20px; gap: 22px; }
+    nav .wrap { padding: 12px 22px; }
+    nav .brand { font-size: 14.5px; }
+    nav .theme-btn { padding: 7px 12px; font-size: 12.5px; }
+    h2 { margin-bottom: 22px; letter-spacing: 0.12em; }
+    .hero-text h1 { font-size: 30px; }
+    .hero-text .tagline { font-size: 17.5px; }
+    .hero-links { gap: 7px; }
+    .hero-links a { padding: 9px 14px; font-size: 13px; }
+    .pub-filter { gap: 6px 6px; margin-bottom: 20px; }
+    .pub-filter button { padding: 8px 13px; font-size: 12.5px; }
+    .pub { padding: 13px 0 13px 28px; font-size: 15px; }
+    .pub::before { top: 15px; }
+    .read-more-btn { padding: 10px 0; margin-top: 14px; }
+    .contact-links {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .contact-links dt {
+      margin-top: 14px;
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .contact-links dt:first-of-type { margin-top: 0; }
+    .contact-links dd { margin-bottom: 4px; }
+    footer { flex-direction: column; gap: 6px; padding: 20px 0; }
+  }
+  @media (max-width: 420px) {
+    main { padding: 0 18px 64px; }
+    .hero { padding: 48px 0 18px; }
+    section { padding: 48px 0 14px; }
+    .hero-text h1 { font-size: 27px; line-height: 1.15; }
+    .hero-text .tagline { font-size: 16.5px; }
+    .hero-text .meta { font-size: 13px; }
+    .portrait { width: 104px; height: 104px; }
+    .pub { padding-left: 26px; font-size: 14.5px; }
+  }
+
+  /* Reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="brand">Victor Ikenna Kanu</a>
+    <ul id="navList">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="https://xvii.substack.com/" target="_blank" rel="noopener">Blog ↗</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">Dark</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navList">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <header class="hero reveal">
+    <div class="hero-text">
+      <h1>Victor Ikenna Kanu</h1>
+      <p class="tagline">Graduate researcher working at the intersection of AI, computational biology, and verifiable scientific workflows.</p>
+      <p class="meta">Kumoh National Institute of Technology &nbsp;·&nbsp; Gumi, South Korea</p>
+      <div class="hero-links">
+        <a href="Victor_Kanu_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+        <a href="mailto:xavierkanu@yahoo.com">Email</a>
+        <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Xaviwho" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://xvii.substack.com/" target="_blank" rel="noopener">Blog ↗</a>
+      </div>
+    </div>
+    <img class="portrait" src="headshot.jpg" alt="Portrait of Victor Ikenna Kanu" />
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="about reveal">
+    <h2>About</h2>
+    <p>I'm a biochemistry-trained researcher currently pursuing a Master of Engineering in ICT Convergence Engineering at Kumoh National Institute of Technology, South Korea, on a K-GKS scholarship. My path into computation began with wet-lab biochemistry at the University of Lagos, where I worked on protein biology and antioxidant chemistry, and it has since grown into a programme of work on machine learning and blockchain-verified workflows for drug discovery.</p>
+    <p>I'm most interested in the moments where biology, machine learning, and reproducibility meet. I build systems that make structure-based virtual screening faster and more trustworthy, and I care deeply about the question of how we know that a model's prediction — or a pipeline's result — actually means what it claims to mean. Much of my recent work sits under that umbrella: consensus AI-docking, deterministic binding-site analysis, and tamper-evident provenance for biomedical data.</p>
+    <p>Outside the lab, I've taught biology and chemistry to more than a hundred students in Nigeria, facilitated entrepreneurial leadership programmes across Nigerian universities, and worked in product research and business development. I like building things that are rigorous <em>and</em> legible — to collaborators, to reviewers, and to the people whose lives the work eventually touches.</p>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research" class="reveal">
+    <h2>Research interests</h2>
+    <div class="research-grid">
+      <div class="research-item">
+        <h3>Structure-based virtual screening</h3>
+        <p>Consensus AI–docking pipelines that combine learned scoring with target-dependent optimisation, aiming at screening libraries that are both more accurate and more verifiable than single-scorer approaches.</p>
+      </div>
+      <div class="research-item">
+        <h3>Protein–ligand modelling and binding-site analysis</h3>
+        <p>Deterministic workflows for protein structure preparation and binding-pocket detection, with an emphasis on reproducibility and cross-tool consistency.</p>
+      </div>
+      <div class="research-item">
+        <h3>Machine learning for drug discovery</h3>
+        <p>Molecular activity prediction, lead optimisation, and scaffold analysis — including physics-informed and federated formulations for settings where data cannot move.</p>
+      </div>
+      <div class="research-item">
+        <h3>Verifiable scientific workflows</h3>
+        <p>Blockchain-integrated provenance for biomedical pipelines, credentialing of biomaterials and certificates, and tamper-evident data management across PDB, UniProt, and IoT-sourced biomedical signals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="reveal">
+    <h2>Selected projects</h2>
+    <div class="projects">
+      <article class="project">
+        <div>
+          <h3>PureProt / PureProtX</h3>
+          <p class="role">Research Lead</p>
+          <p>AI-enabled virtual screening and protein-focused drug discovery workflow integrating computational modelling and predictive analysis. Target-dependent screening, protein structure and binding-site analysis, reproducible workflow design.</p>
+        </div>
+        <div class="dates">Dec 2025 – Present</div>
+      </article>
+      <article class="project">
+        <div>
+          <h3>ProtChain</h3>
+          <p class="role">Research Lead</p>
+          <p>Blockchain-secured framework for biomedical and scientific workflow provenance, integrating PDB and UniProt to support reproducible computational biology pipelines. Published in <em>PeerJ Computer Science</em>.</p>
+        </div>
+        <div class="dates">Sep 2024 – Jan 2026</div>
+      </article>
+      <article class="project">
+        <div>
+          <h3>HiTex</h3>
+          <p class="role">Tech Lead</p>
+          <p>Secure collaborative LaTeX writing tool built on the lab's Purechain network. Focused on multi-author integrity and verifiable document history.</p>
+        </div>
+        <div class="dates">Jan 2026 – Present</div>
+      </article>
+      <article class="project">
+        <div>
+          <h3>ChainPilot</h3>
+          <p class="role">Tech Lead</p>
+          <p>Blockchain abstraction platform designed to lower the integration cost of adopting Purechain across lab applications.</p>
+        </div>
+        <div class="dates">Aug – Nov 2025</div>
+      </article>
+      <article class="project">
+        <div>
+          <h3>PureCertificate</h3>
+          <p class="role">Technical Paper Lead</p>
+          <p>Certificate protection and tampering-verification system via blockchain, with a policy-enforced credential architecture.</p>
+        </div>
+        <div class="dates">Mar 2024 – Dec 2025</div>
+      </article>
+      <article class="project">
+        <div>
+          <h3>HackBio — TB target exploration</h3>
+          <p class="role">Bioinformatics Intern</p>
+          <p>Investigated protein targets of <em>Mycobacterium tuberculosis</em> and potential drug candidates using molecular docking and bioinformatics tooling.</p>
+        </div>
+        <div class="dates">Sep 2021</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications" class="reveal">
+    <h2>Publications</h2>
+    <div class="pub-filter" role="tablist">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="journal">Journal</button>
+      <button data-filter="conference">Conference</button>
+      <button data-filter="book">Book chapter</button>
+      <button data-filter="seminar">Seminars presented</button>
+    </div>
+
+    <div class="pub-group" data-group="journal">
+      <h3>Journal articles</h3>
+      <ol class="pub-list">
+        <li class="pub" data-type="journal">
+          <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S. <strong>PureProtX: Verifiable Consensus AI–Docking Virtual Screening with Target-Dependent Hybrid Optimisation</strong>, 2026. <span class="status">Under review</span>
+        </li>
+        <li class="pub" data-type="journal">
+          <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Lee, J.M., Kim, D.S. <strong>Deterministic Protein Structure and Binding Site Analysis through Blockchain-Integrated Workflow Verification</strong>, 2025. <span class="venue">ICT Express.</span>
+        </li>
+        <li class="pub" data-type="journal">
+          <span class="author-self">Kanu, V.I.</span>, Isong, J., Ajakwe, S.O., Kim, D.S. <strong>ProtChain: Blockchain-Secured IoT Data Provenance for Biomedical and Scientific Workflows</strong>, 2025. <span class="venue">PeerJ Computer Science.</span>
+        </li>
+        <li class="pub" data-type="journal">
+          Amadi, S.C., <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S., Taesoon, J. <strong>CONQUEST: A Federated Context-Aware Quantum-Inspired Framework for Robust Cyberworm Detection in Mission-Critical IoT Networks</strong>, 2026. <span class="status">Under review</span>
+        </li>
+        <li class="pub" data-type="journal">
+          Amadi, S.C., <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S., Taesoon, J. <strong>OrBIT: Orchestrated Blockchain Integrated Twins for Privacy-Aware Edge Intelligence and Transparent Lifecycle</strong>, 2026. <span class="status">Under review</span>
+        </li>
+        <li class="pub" data-type="journal">
+          Isong, J.A., <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S. <strong>FedEpi: A Robust Physics-Informed Federated Framework for Secure Multi-Source IoT Intelligence</strong>, 2026. <span class="status">Under review</span>
+        </li>
+        <li class="pub" data-type="journal">
+          Ajakwe, I.U., <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S. <strong>PredBlock: A Physics-Informed AI and Blockchain Framework for Integrity Verification in CO₂ CCS Pipelines Optimization</strong>. <span class="status">Under review</span>
+        </li>
+        <li class="pub" data-type="journal">
+          <span class="author-self">Kanu, V.I.</span>, Ajakwe, I.U., Ajakwe, S.O., Kim, D.S. <strong>Offline-Capable AI–Blockchain Architecture for Biochemical Threat Detection in Mission-Critical MANET Environments</strong>, 2025. <span class="venue">IEEE Internet of Things Journal.</span>
+        </li>
+        <li class="pub" data-type="journal">
+          Ajakwe, I.U., <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S. <strong>eBCTC: Energy-Efficient Hybrid Blockchain Architecture for Smart and Secured K-ETS</strong>, 2025. <span class="venue">Cleaner Engineering and Technology, 101084.</span>
+        </li>
+        <li class="pub" data-type="journal">
+          Ihejirika, M., Osaretin, A.T.E., Imaga, N.A., <span class="author-self">Kanu, V.I.</span>, Edmunds, P.O. <strong>Phytochemical and antioxidant profiling of aqueous and ethanol extracts of Curcuma longa and Cinnamomum zeylanicum</strong>, 2022. <span class="venue">International Journal of Advance Biochemical Research.</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="pub-group" data-group="conference">
+      <h3>Conference proceedings</h3>
+      <ol class="pub-list">
+        <li class="pub" data-type="conference">
+          <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S. <strong>BioPassport: A Policy-Enforced Blockchain-Credential Architecture for Tamper-Evident Biomaterial Provenance</strong>. <span class="venue">8th IEEE International Conference on Blockchain and Cryptocurrency</span>, Brisbane, Australia, Jun 2026. <span class="status">Accepted</span>
+        </li>
+        <li class="pub" data-type="conference">
+          <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S. <strong>VeraComm: Verifiable Communication Protocol for AI-Based Drug Screening using Blockchain</strong>. <span class="venue">8th International Conference on AI in Information and Communication</span>, Tokyo, Japan, Feb 2026.
+        </li>
+        <li class="pub" data-type="conference">
+          <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S. <strong>PureProt: An AI-Blockchain Enabled Virtual Screening Platform for Drug Discovery</strong>. <span class="venue">16th IEEE International Conference on ICT Convergence (ICTC)</span>, Jeju Island, South Korea, Oct 2025.
+        </li>
+        <li class="pub" data-type="conference">
+          <span class="author-self">Kanu, V.I.</span>, Ajakwe, I.U., Ajakwe, S.O., Kim, D.S. <strong>Tamper-Resistant AI-Blockchain-Driven Biochemical Threat Detection in Disconnected Tactical MANETs</strong>. <span class="venue">Young Scholars Workshop, IEEE MILCOM</span>, Oct 2025.
+        </li>
+        <li class="pub" data-type="conference">
+          <span class="author-self">Kanu, V.I.</span>, Isong, J., Ajakwe, S.O., Kim, D.S. <strong>Blockchain-Enabled Framework for Efficient and Interoperable Proteomic Data Management</strong>. <span class="venue">International Conference on Ubiquitous and Future Networks (ICUFN)</span>, Lisbon, Portugal, Jul 2025.
+        </li>
+        <li class="pub" data-type="conference">
+          <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S. <strong>Blockchain-Verified Deterministic Framework for Protein Structure and Binding Site Analysis in Drug Discovery Distributed System</strong>. <span class="venue">KICS Summer Conference 2025</span>, Jeju Island, South Korea, Jun 2025.
+        </li>
+        <li class="pub" data-type="conference">
+          <span class="author-self">Kanu, V.I.</span>, Isong, J., Ajakwe, S.O., Kim, D.S. <strong>Microservices Architecture for Blockchain-Based Proteomic Data Storage System Integrated with PDB and UniProt</strong>. <span class="venue">KICS Winter Conference 2025</span>, Pyeongchang, South Korea, Feb 2025.
+        </li>
+        <li class="pub" data-type="conference">
+          Nnadiekwe, C.A., <span class="author-self">Kanu, V.I.</span>, Akor, G., Kim, D.S. <strong>Blockchain-enabled Secured Lightweight Data Management in Smart Factories</strong>. <span class="venue">KICS Winter Conference 2025</span>, Feb 2025.
+        </li>
+        <li class="pub" data-type="conference">
+          <span class="author-self">Kanu, V.I.</span>, Ajakwe, U.I., Ajakwe, S.O., Lee, J.M., Kim, D.S. <strong>Anthropomorphic and Accountable AI-Driven Power Generation and Distribution System</strong>. <span class="venue">KICS Fall Conference 2024</span>, Nov 2024.
+        </li>
+        <li class="pub" data-type="conference">
+          <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Lee, J.M., Kim, D.S. <strong>Blockchain Technology in Protein Folding: Enhancing Data Sharing and Collaboration</strong>. <span class="venue">15th IEEE International Conference on ICT Convergence (ICTC)</span>, Oct 2024. <a href="https://doi.org/10.1109/ICTC62082.2024.10826960" target="_blank" rel="noopener">doi:10.1109/ICTC62082.2024.10826960</a>
+        </li>
+      </ol>
+    </div>
+
+    <div class="pub-group" data-group="book">
+      <h3>Book chapter</h3>
+      <ol class="pub-list">
+        <li class="pub" data-type="book">
+          Okafor, C.I., <span class="author-self">Kanu, V.I.</span>, Akor, C.G., Lee, J.M., Kim, D.S. <strong>Autonomous Intelligent Vehicles: An Overview</strong>. In <span class="venue">Blockchain for Security of Autonomous Intelligent Vehicles</span>, Springer Nature. <span class="status">Major revision</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="pub-group" data-group="seminar">
+      <h3>Seminar presentations</h3>
+      <ol class="pub-list">
+        <li class="pub" data-type="seminar">
+          Tapwal, R., Misra, S., Pal, S.K. <strong>UtilityChain: Dynamic Resource Allocation for Mining and Servicing in Blockchain Systems</strong>. <span class="venue">IEEE Transactions on Services Computing, 2023.</span> Presented 11 Sep 2024.
+        </li>
+        <li class="pub" data-type="seminar">
+          Yakubu, A.M., Chen, Y.P.P. <strong>A Blockchain-based Application for Genomic Access and Variant Discovery using Smart Contracts and Homomorphic Encryption</strong>. <span class="venue">Elsevier Future Generation Computer Systems, 2022.</span> Presented 20 Mar 2025.
+        </li>
+        <li class="pub" data-type="seminar">
+          Demirbaga, U., Aujla, G.S. <strong>MapChain: Blockchain-Based Verifiable Healthcare Service Management in IoT-Based Big Data Ecosystems</strong>. <span class="venue">IEEE Transactions on Network and Service Management, 2022.</span> Presented 10 Jul 2025.
+        </li>
+        <li class="pub" data-type="seminar">
+          Wang, R., Xu, C., Zhang, X. <strong>Toward Materials Genome Big-Data: Blockchain-Based Secure Storage and Efficient Retrieval</strong>. <span class="venue">IEEE TPDS, 2024.</span> Presented 4 Sep 2025.
+        </li>
+        <li class="pub" data-type="seminar">
+          Du, X.X., Liu, M.Y., Sun, Y.H. <strong>Segmentation, Detection, and Tracking of Stem Cell Images by Digital Twins and Lightweight Deep Learning</strong>. <span class="venue">Computational Intelligence and Neuroscience, 2022.</span> Presented 2 Mar 2026.
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section id="awards" class="reveal">
+    <h2>Awards &amp; honours</h2>
+    <ul class="awards">
+      <li class="award">
+        <div>
+          <span class="title">3rd Place, NSL Winter Intensive Papers</span>
+          <span class="issuer">NSLab</span>
+        </div>
+        <span class="date">Apr 2026</span>
+      </li>
+      <li class="award">
+        <div>
+          <span class="title">Excellent Paper Award, ICIAIIC 2026</span>
+          <span class="issuer">ICAIIC Technical Programme Committee · Tokyo, Japan</span>
+        </div>
+        <span class="date">Feb 2026</span>
+      </li>
+      <li class="award">
+        <div>
+          <span class="title">Grand Prize, Gumi Industrial Complex Paper Contest</span>
+          <span class="issuer">Korean Institute of Communications and Information Sciences</span>
+        </div>
+        <span class="date">Dec 2024</span>
+      </li>
+      <li class="award">
+        <div>
+          <span class="title">Best Essay Award</span>
+          <span class="issuer">Gyeongbuk Provincial College</span>
+        </div>
+        <span class="date">Aug 2024</span>
+      </li>
+      <li class="award">
+        <div>
+          <span class="title">K-GKS Scholarship (full-ride graduate scholarship)</span>
+          <span class="issuer">Korean Government</span>
+        </div>
+        <span class="date">Jul 2024</span>
+      </li>
+      <li class="award">
+        <div>
+          <span class="title">Lead Student Innovators Award</span>
+          <span class="issuer">Vice-Chancellor, University of Lagos</span>
+        </div>
+        <span class="date">Sep 2019</span>
+      </li>
+      <li class="award">
+        <div>
+          <span class="title">Best Speaker, Biochemistry Inter-Level Debate</span>
+          <span class="issuer">Department of Biochemistry, University of Lagos</span>
+        </div>
+        <span class="date">Oct 2018</span>
+      </li>
+      <li class="award">
+        <div>
+          <span class="title">Most Viable Idea Prize</span>
+          <span class="issuer">The Bridge Program</span>
+        </div>
+        <span class="date">Sep 2016</span>
+      </li>
+      <li class="award">
+        <div>
+          <span class="title">Best Group Presentation</span>
+          <span class="issuer">Entrepreneurial Development Program, Yabatech</span>
+        </div>
+        <span class="date">Aug 2015</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- TEACHING -->
+  <section id="teaching" class="reveal">
+    <h2>Teaching &amp; mentorship</h2>
+    <div class="teaching-item">
+      <h4>Entrepreneurial Leadership Facilitator — The Bridge Program</h4>
+      <div class="org">Aug 2021 &amp; Aug 2022</div>
+      <p>Facilitated sessions on Empathy &amp; Feedback, Identity &amp; Mental Models, Proactivity, and Leading Change for fellows selected from 102 universities across Nigeria.</p>
+    </div>
+    <div class="teaching-item">
+      <h4>Biology &amp; Chemistry Tutor — Breakthrough Tutorial</h4>
+      <div class="org">Jun 2013 – Mar 2022</div>
+      <p>Prepared over 100 students for national secondary school and university entrance examinations, maintaining an approximate 90% pass rate.</p>
+    </div>
+    <div class="teaching-item">
+      <h4>Administrative Assistant — Elizade University ELP</h4>
+      <div class="org">Jun 2013 – Mar 2022</div>
+      <p>Supported the programme facilitator in preparing teaching and training materials for ELP lecturers at Elizade University, Ondo State.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="reveal">
+    <h2>Contact</h2>
+    <p>I'm happy to hear from collaborators, students, and groups interested in AI for drug discovery or verifiable scientific workflows. Email is the fastest way to reach me.</p>
+    <dl class="contact-links">
+      <dt>Email</dt><dd><a href="mailto:xavierkanu@yahoo.com">xavierkanu@yahoo.com</a></dd>
+      <dt>Lab</dt><dd>Kumoh National Institute of Technology, Gumi, Gyeongsangbuk, South Korea</dd>
+      <dt>Blog</dt><dd><a href="https://xvii.substack.com/" target="_blank" rel="noopener">xvii.substack.com</a></dd>
+      <dt>GitHub</dt><dd><a href="https://github.com/Xaviwho" target="_blank" rel="noopener">Xaviwho</a></dd>
+      <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/" target="_blank" rel="noopener">Xavier Victor Kanu</a></dd>
+      <dt>Scholar</dt><dd><a href="https://scholar.google.com/" target="_blank" rel="noopener">Victor Ikenna Kanu</a></dd>
+      <dt>CV</dt><dd><a href="Victor_Kanu_CV.pdf" target="_blank" rel="noopener">Download PDF</a></dd>
+    </dl>
+  </section>
+
+  <footer>
+    <div>© <span id="year"></span> Victor Ikenna Kanu</div>
+    <div>Last updated April 2026</div>
+  </footer>
+</main>
+
+<button class="to-top" id="toTop" aria-label="Back to top" title="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <line x1="12" y1="19" x2="12" y2="5"></line>
+    <polyline points="5 12 12 5 19 12"></polyline>
+  </svg>
+</button>
+
+<script>
+  // Mobile nav toggle
+  (function() {
+    var btn = document.getElementById('navToggle');
+    var list = document.getElementById('navList');
+    if (!btn || !list) return;
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var open = list.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    // Close when a link is tapped
+    list.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A') {
+        list.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Open menu');
+      }
+    });
+    // Close when tapping outside
+    document.addEventListener('click', function(e) {
+      if (!list.classList.contains('open')) return;
+      if (list.contains(e.target) || btn.contains(e.target)) return;
+      list.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Open menu');
+    });
+    // Close on escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && list.classList.contains('open')) {
+        list.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.focus();
+      }
+    });
+  })();
+
+  // Theme toggle
+  (function() {
+    var btn = document.getElementById('themeBtn');
+    var stored = null;
+    try { stored = localStorage.getItem('theme'); } catch(e) {}
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var initial = stored || (prefersDark ? 'dark' : 'light');
+    if (initial === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    btn.textContent = (initial === 'dark') ? 'Light' : 'Dark';
+    btn.addEventListener('click', function() {
+      var cur = document.documentElement.getAttribute('data-theme');
+      var next = cur === 'dark' ? 'light' : 'dark';
+      if (next === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      else document.documentElement.removeAttribute('data-theme');
+      btn.textContent = next === 'dark' ? 'Light' : 'Dark';
+      try { localStorage.setItem('theme', next); } catch(e) {}
+    });
+  })();
+
+  // Publication filter
+  (function() {
+    var buttons = document.querySelectorAll('.pub-filter button');
+    var groups = document.querySelectorAll('.pub-group');
+    buttons.forEach(function(b) {
+      b.addEventListener('click', function() {
+        buttons.forEach(function(x) { x.classList.remove('active'); });
+        b.classList.add('active');
+        var f = b.getAttribute('data-filter');
+        groups.forEach(function(g) {
+          if (f === 'all' || g.getAttribute('data-group') === f) {
+            g.style.display = '';
+          } else {
+            g.style.display = 'none';
+          }
+        });
+      });
+    });
+  })();
+
+  // Reveal on scroll
+  (function() {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function(el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    els.forEach(function(el) { io.observe(el); });
+  })();
+
+  // Progressive disclosure — preview then "Read more"
+  var disclosureBlocks = [];
+  (function() {
+    var configs = [
+      { wrap: '#about',    items: '.about > p',         preview: 1 },
+      { wrap: '#research', items: '.research-item',     preview: 2 },
+      { wrap: '#projects', items: '.project',           preview: 3 },
+      { wrap: '#awards',   items: '.award',             preview: 4 }
+    ];
+    configs.forEach(function(cfg) {
+      var wrap = document.querySelector(cfg.wrap);
+      if (!wrap) return;
+      var items = wrap.querySelectorAll(cfg.items);
+      if (items.length <= cfg.preview) return;
+      var hidden = [];
+      Array.prototype.forEach.call(items, function(el, i) {
+        if (i >= cfg.preview) { el.classList.add('hidden-preview'); hidden.push(el); }
+      });
+      if (!hidden.length) return;
+      var btn = document.createElement('button');
+      btn.className = 'read-more-btn';
+      btn.type = 'button';
+      btn.innerHTML = 'Read more<span class="count">(' + hidden.length + ' more)</span>';
+      wrap.appendChild(btn);
+      var block = { wrap: wrap, items: hidden, btn: btn, expanded: false };
+      btn.addEventListener('click', function() { expandBlock(block); });
+      disclosureBlocks.push(block);
+    });
+
+    // Pub groups — collapse each to first 3
+    var pubGroups = document.querySelectorAll('.pub-group');
+    Array.prototype.forEach.call(pubGroups, function(g) {
+      var items = g.querySelectorAll('.pub');
+      var preview = 3;
+      if (items.length <= preview) return;
+      var hidden = [];
+      Array.prototype.forEach.call(items, function(el, i) {
+        if (i >= preview) { el.classList.add('hidden-preview'); hidden.push(el); }
+      });
+      if (!hidden.length) return;
+      var btn = document.createElement('button');
+      btn.className = 'read-more-btn';
+      btn.type = 'button';
+      btn.innerHTML = 'Read more<span class="count">(' + hidden.length + ' more)</span>';
+      g.appendChild(btn);
+      var block = { wrap: g, items: hidden, btn: btn, expanded: false };
+      btn.addEventListener('click', function() { expandBlock(block); });
+      disclosureBlocks.push(block);
+    });
+  })();
+
+  function expandBlock(block) {
+    if (block.expanded) return;
+    block.items.forEach(function(el) { el.classList.remove('hidden-preview'); });
+    if (block.btn && block.btn.parentNode) block.btn.remove();
+    block.expanded = true;
+  }
+
+  function expandSection(section) {
+    if (!section) return;
+    disclosureBlocks.forEach(function(b) {
+      if (section === b.wrap || section.contains(b.wrap)) {
+        if (!b.expanded) expandBlock(b);
+      }
+    });
+  }
+
+  // Nav (and any in-page anchor) click auto-expands the target section
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function() {
+      var href = a.getAttribute('href');
+      if (!href || href === '#' || href === '#top') return;
+      var id = href.slice(1);
+      var el = document.getElementById(id);
+      if (el) expandSection(el);
+    });
+  });
+
+  // Hash already present or changes later
+  if (location.hash && location.hash.length > 1) {
+    var initial = document.getElementById(location.hash.slice(1));
+    if (initial) expandSection(initial);
+  }
+  window.addEventListener('hashchange', function() {
+    if (!location.hash || location.hash.length <= 1) return;
+    var el = document.getElementById(location.hash.slice(1));
+    if (el) expandSection(el);
+  });
+
+  // Back-to-top button
+  (function() {
+    var btn = document.getElementById('toTop');
+    if (!btn) return;
+    var threshold = 480;
+    var update = function() {
+      if (window.pageYOffset > threshold) btn.classList.add('visible');
+      else btn.classList.remove('visible');
+    };
+    window.addEventListener('scroll', update, { passive: true });
+    btn.addEventListener('click', function() {
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    });
+    update();
+  })();
+
+  // Current year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
