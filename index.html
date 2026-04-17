@@ -302,6 +302,26 @@
     color: var(--text-muted);
     white-space: nowrap;
   }
+  .project-links {
+    margin: 10px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    font-family: var(--sans);
+    font-size: 13px;
+  }
+  .project-links a {
+    color: var(--accent);
+    border-bottom: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+    padding-bottom: 1px;
+  }
+  .project-links a::after {
+    content: '↗';
+    margin-left: 4px;
+    font-size: 11px;
+    opacity: 0.7;
+  }
+  .project-links a:hover { border-bottom-color: var(--accent); }
   @media (max-width: 560px) {
     .project { grid-template-columns: 1fr; gap: 4px; }
   }
@@ -384,6 +404,28 @@
     font-family: var(--mono);
     font-size: 13px;
     color: var(--text-muted);
+  }
+  .pub .paper-link {
+    display: inline-block;
+    margin-left: 4px;
+    padding: 1px 8px;
+    font-family: var(--sans);
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--text-secondary);
+    background: transparent;
+    border: 1px solid var(--border-strong);
+    border-radius: 3px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    vertical-align: 1px;
+    white-space: nowrap;
+  }
+  .pub .paper-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 6%, transparent);
   }
 
   /* Awards */
@@ -622,8 +664,8 @@
       <div class="hero-links">
         <a href="Victor_Kanu_CV.pdf" target="_blank" rel="noopener">Download CV</a>
         <a href="mailto:xavierkanu@yahoo.com">Email</a>
-        <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=qbFnQxAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/xavierkanu/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/Xaviwho" target="_blank" rel="noopener">GitHub</a>
         <a href="https://xvii.substack.com/" target="_blank" rel="noopener">Blog ↗</a>
       </div>
@@ -687,6 +729,9 @@
           <h3>HiTex</h3>
           <p class="role">Tech Lead</p>
           <p>Secure collaborative LaTeX writing tool built on the lab's Purechain network. Focused on multi-author integrity and verifiable document history.</p>
+          <div class="project-links">
+            <a href="https://hitexapps.com" target="_blank" rel="noopener">hitexapps.com</a>
+          </div>
         </div>
         <div class="dates">Jan 2026 – Present</div>
       </article>
@@ -735,10 +780,10 @@
           <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S. <strong>PureProtX: Verifiable Consensus AI–Docking Virtual Screening with Target-Dependent Hybrid Optimisation</strong>, 2026. <span class="status">Under review</span>
         </li>
         <li class="pub" data-type="journal">
-          <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Lee, J.M., Kim, D.S. <strong>Deterministic Protein Structure and Binding Site Analysis through Blockchain-Integrated Workflow Verification</strong>, 2025. <span class="venue">ICT Express.</span>
+          <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Lee, J.M., Kim, D.S. <strong>Deterministic Protein Structure and Binding Site Analysis through Blockchain-Integrated Workflow Verification</strong>, 2025. <span class="venue">ICT Express.</span> <a class="paper-link" href="https://www.sciencedirect.com/science/article/pii/S2405959525001821" target="_blank" rel="noopener">ScienceDirect</a>
         </li>
         <li class="pub" data-type="journal">
-          <span class="author-self">Kanu, V.I.</span>, Isong, J., Ajakwe, S.O., Kim, D.S. <strong>ProtChain: Blockchain-Secured IoT Data Provenance for Biomedical and Scientific Workflows</strong>, 2025. <span class="venue">PeerJ Computer Science.</span>
+          <span class="author-self">Kanu, V.I.</span>, Isong, J., Ajakwe, S.O., Kim, D.S. <strong>ProtChain: Blockchain-Secured IoT Data Provenance for Biomedical and Scientific Workflows</strong>, 2025. <span class="venue">PeerJ Computer Science.</span> <a class="paper-link" href="https://doi.org/10.7717/peerj-cs.3615" target="_blank" rel="noopener">DOI</a>
         </li>
         <li class="pub" data-type="journal">
           Amadi, S.C., <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S., Taesoon, J. <strong>CONQUEST: A Federated Context-Aware Quantum-Inspired Framework for Robust Cyberworm Detection in Mission-Critical IoT Networks</strong>, 2026. <span class="status">Under review</span>
@@ -753,13 +798,13 @@
           Ajakwe, I.U., <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S. <strong>PredBlock: A Physics-Informed AI and Blockchain Framework for Integrity Verification in CO₂ CCS Pipelines Optimization</strong>. <span class="status">Under review</span>
         </li>
         <li class="pub" data-type="journal">
-          <span class="author-self">Kanu, V.I.</span>, Ajakwe, I.U., Ajakwe, S.O., Kim, D.S. <strong>Offline-Capable AI–Blockchain Architecture for Biochemical Threat Detection in Mission-Critical MANET Environments</strong>, 2025. <span class="venue">IEEE Internet of Things Journal.</span>
+          <span class="author-self">Kanu, V.I.</span>, Ajakwe, I.U., Ajakwe, S.O., Kim, D.S. <strong>Offline-Capable AI–Blockchain Architecture for Biochemical Threat Detection in Mission-Critical MANET Environments</strong>, 2025. <span class="venue">IEEE Internet of Things Journal.</span> <a class="paper-link" href="https://doi.org/10.1109/JIOT.2026.3663607" target="_blank" rel="noopener">DOI</a>
         </li>
         <li class="pub" data-type="journal">
-          Ajakwe, I.U., <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S. <strong>eBCTC: Energy-Efficient Hybrid Blockchain Architecture for Smart and Secured K-ETS</strong>, 2025. <span class="venue">Cleaner Engineering and Technology, 101084.</span>
+          Ajakwe, I.U., <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S. <strong>eBCTC: Energy-Efficient Hybrid Blockchain Architecture for Smart and Secured K-ETS</strong>, 2025. <span class="venue">Cleaner Engineering and Technology, 101084.</span> <a class="paper-link" href="https://www.sciencedirect.com/science/article/pii/S2666790825002071" target="_blank" rel="noopener">ScienceDirect</a>
         </li>
         <li class="pub" data-type="journal">
-          Ihejirika, M., Osaretin, A.T.E., Imaga, N.A., <span class="author-self">Kanu, V.I.</span>, Edmunds, P.O. <strong>Phytochemical and antioxidant profiling of aqueous and ethanol extracts of Curcuma longa and Cinnamomum zeylanicum</strong>, 2022. <span class="venue">International Journal of Advance Biochemical Research.</span>
+          Ihejirika, M., Osaretin, A.T.E., Imaga, N.A., <span class="author-self">Kanu, V.I.</span>, Edmunds, P.O. <strong>Phytochemical and antioxidant profiling of aqueous and ethanol extracts of Curcuma longa and Cinnamomum zeylanicum</strong>, 2022. <span class="venue">International Journal of Advance Biochemical Research.</span> <a class="paper-link" href="https://www.biochemjournal.com/articles/98/6-1-26-641.pdf" target="_blank" rel="noopener">PDF</a>
         </li>
       </ol>
     </div>
@@ -774,19 +819,19 @@
           <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S. <strong>VeraComm: Verifiable Communication Protocol for AI-Based Drug Screening using Blockchain</strong>. <span class="venue">8th International Conference on AI in Information and Communication</span>, Tokyo, Japan, Feb 2026.
         </li>
         <li class="pub" data-type="conference">
-          <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S. <strong>PureProt: An AI-Blockchain Enabled Virtual Screening Platform for Drug Discovery</strong>. <span class="venue">16th IEEE International Conference on ICT Convergence (ICTC)</span>, Jeju Island, South Korea, Oct 2025.
+          <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S. <strong>PureProt: An AI-Blockchain Enabled Virtual Screening Platform for Drug Discovery</strong>. <span class="venue">16th IEEE International Conference on ICT Convergence (ICTC)</span>, Jeju Island, South Korea, Oct 2025. <a class="paper-link" href="https://doi.org/10.1109/ICTC66702.2025.11388620" target="_blank" rel="noopener">DOI</a>
         </li>
         <li class="pub" data-type="conference">
           <span class="author-self">Kanu, V.I.</span>, Ajakwe, I.U., Ajakwe, S.O., Kim, D.S. <strong>Tamper-Resistant AI-Blockchain-Driven Biochemical Threat Detection in Disconnected Tactical MANETs</strong>. <span class="venue">Young Scholars Workshop, IEEE MILCOM</span>, Oct 2025.
         </li>
         <li class="pub" data-type="conference">
-          <span class="author-self">Kanu, V.I.</span>, Isong, J., Ajakwe, S.O., Kim, D.S. <strong>Blockchain-Enabled Framework for Efficient and Interoperable Proteomic Data Management</strong>. <span class="venue">International Conference on Ubiquitous and Future Networks (ICUFN)</span>, Lisbon, Portugal, Jul 2025.
+          <span class="author-self">Kanu, V.I.</span>, Isong, J., Ajakwe, S.O., Kim, D.S. <strong>Blockchain-Enabled Framework for Efficient and Interoperable Proteomic Data Management</strong>. <span class="venue">International Conference on Ubiquitous and Future Networks (ICUFN)</span>, Lisbon, Portugal, Jul 2025. <a class="paper-link" href="https://ieeexplore.ieee.org/document/11169963" target="_blank" rel="noopener">IEEE Xplore</a>
         </li>
         <li class="pub" data-type="conference">
           <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Kim, D.S. <strong>Blockchain-Verified Deterministic Framework for Protein Structure and Binding Site Analysis in Drug Discovery Distributed System</strong>. <span class="venue">KICS Summer Conference 2025</span>, Jeju Island, South Korea, Jun 2025.
         </li>
         <li class="pub" data-type="conference">
-          <span class="author-self">Kanu, V.I.</span>, Isong, J., Ajakwe, S.O., Kim, D.S. <strong>Microservices Architecture for Blockchain-Based Proteomic Data Storage System Integrated with PDB and UniProt</strong>. <span class="venue">KICS Winter Conference 2025</span>, Pyeongchang, South Korea, Feb 2025.
+          <span class="author-self">Kanu, V.I.</span>, Isong, J., Ajakwe, S.O., Kim, D.S. <strong>Microservices Architecture for Blockchain-Based Proteomic Data Storage System Integrated with PDB and UniProt</strong>. <span class="venue">KICS Winter Conference 2025</span>, Pyeongchang, South Korea, Feb 2025. <a class="paper-link" href="https://www.researchgate.net/publication/389399110_Microservices_Architecture_for_Blockchain-Based_Proteomic_Data_Storage_System_Integrated_with_PDB_and_UniProt" target="_blank" rel="noopener">ResearchGate</a>
         </li>
         <li class="pub" data-type="conference">
           Nnadiekwe, C.A., <span class="author-self">Kanu, V.I.</span>, Akor, G., Kim, D.S. <strong>Blockchain-enabled Secured Lightweight Data Management in Smart Factories</strong>. <span class="venue">KICS Winter Conference 2025</span>, Feb 2025.
@@ -795,7 +840,7 @@
           <span class="author-self">Kanu, V.I.</span>, Ajakwe, U.I., Ajakwe, S.O., Lee, J.M., Kim, D.S. <strong>Anthropomorphic and Accountable AI-Driven Power Generation and Distribution System</strong>. <span class="venue">KICS Fall Conference 2024</span>, Nov 2024.
         </li>
         <li class="pub" data-type="conference">
-          <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Lee, J.M., Kim, D.S. <strong>Blockchain Technology in Protein Folding: Enhancing Data Sharing and Collaboration</strong>. <span class="venue">15th IEEE International Conference on ICT Convergence (ICTC)</span>, Oct 2024. <a href="https://doi.org/10.1109/ICTC62082.2024.10826960" target="_blank" rel="noopener">doi:10.1109/ICTC62082.2024.10826960</a>
+          <span class="author-self">Kanu, V.I.</span>, Ajakwe, S.O., Lee, J.M., Kim, D.S. <strong>Blockchain Technology in Protein Folding: Enhancing Data Sharing and Collaboration</strong>. <span class="venue">15th IEEE International Conference on ICT Convergence (ICTC)</span>, Oct 2024. <a class="paper-link" href="https://doi.org/10.1109/ICTC62082.2024.10826960" target="_blank" rel="noopener">DOI</a>
         </li>
       </ol>
     </div>
@@ -930,8 +975,8 @@
       <dt>Lab</dt><dd>Kumoh National Institute of Technology, Gumi, Gyeongsangbuk, South Korea</dd>
       <dt>Blog</dt><dd><a href="https://xvii.substack.com/" target="_blank" rel="noopener">xvii.substack.com</a></dd>
       <dt>GitHub</dt><dd><a href="https://github.com/Xaviwho" target="_blank" rel="noopener">Xaviwho</a></dd>
-      <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/" target="_blank" rel="noopener">Xavier Victor Kanu</a></dd>
-      <dt>Scholar</dt><dd><a href="https://scholar.google.com/" target="_blank" rel="noopener">Victor Ikenna Kanu</a></dd>
+      <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/xavierkanu/" target="_blank" rel="noopener">Xavier Victor Kanu</a></dd>
+      <dt>Scholar</dt><dd><a href="https://scholar.google.com/citations?user=qbFnQxAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Victor Ikenna Kanu</a></dd>
       <dt>CV</dt><dd><a href="Victor_Kanu_CV.pdf" target="_blank" rel="noopener">Download PDF</a></dd>
     </dl>
   </section>
