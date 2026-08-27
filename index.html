@@ -91,7 +91,7 @@
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 22px;
+    gap: 16px;
     font-family: var(--sans);
     font-size: 14px;
   }
@@ -132,7 +132,7 @@
   nav .nav-toggle.open svg { transform: rotate(90deg); }
   nav .nav-actions { display: flex; align-items: center; gap: 8px; }
 
-  @media (max-width: 820px) {
+  @media (max-width: 900px) {
     nav .nav-toggle { display: inline-flex; }
     nav ul {
       display: none;
@@ -365,6 +365,15 @@
     font-weight: 500;
     margin: 0 0 14px;
     font-family: var(--sans);
+  }
+  .pub-group h3 .group-count {
+    margin-left: 8px;
+    padding: 1px 7px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
   }
   .pub-list { list-style: none; padding: 0; margin: 0; counter-reset: pub; }
   .pub {
@@ -1131,6 +1140,9 @@
         groups.forEach(function(g) {
           if (f === 'all' || g.getAttribute('data-group') === f) {
             g.style.display = '';
+            // Narrowing to one type means "show me all of these" — don't
+            // leave the group collapsed behind a Read more button.
+            if (f !== 'all') expandSection(g);
           } else {
             g.style.display = 'none';
           }
@@ -1190,7 +1202,14 @@
     var pubGroups = document.querySelectorAll('.pub-group');
     Array.prototype.forEach.call(pubGroups, function(g) {
       var items = g.querySelectorAll('.pub');
-      var preview = 3;
+      var preview = 6;
+      var head = g.querySelector('h3');
+      if (head && items.length > 1 && !head.querySelector('.group-count')) {
+        var count = document.createElement('span');
+        count.className = 'group-count';
+        count.textContent = items.length;
+        head.appendChild(count);
+      }
       if (items.length <= preview) return;
       var hidden = [];
       Array.prototype.forEach.call(items, function(el, i) {
